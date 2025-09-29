@@ -24,8 +24,8 @@
     "start": "EXPO_NO_TELEMETRY=1 expo start",
     "build:web": "expo export --platform web",
     "lint": "expo lint",
-    "predeploy": "npm run build:web",
-    "deploy": "gh-pages -d web-build"
+    "predeploy": "npm run build:web && node fix-paths.js",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@expo-google-fonts/comic-neue": "^0.2.3",

@@ -14,8 +14,7 @@
     "web": {
       "bundler": "metro",
       "output": "single",
-      "favicon": "./assets/images/favicon.png",
-      "baseUrl": "/KidFinance-P2W/"
+      "favicon": "./assets/images/favicon.png"
     },
     "plugins": ["expo-router"],
     "experiments": {
