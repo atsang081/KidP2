@@ -1,5 +1,10 @@
 # 🏦 Kids Piggy Bank - Financial Education App
 
+## 🌐 Live Demo
+**Try the app now**: [https://atsang081.github.io/KidFinance-P2W](https://atsang081.github.io/KidFinance-P2W)
+
+*No installation required - works directly in your web browser!*
+
 A React Native educational app designed to teach children about money management, savings, and financial responsibility.
 
 ## 📱 Features
