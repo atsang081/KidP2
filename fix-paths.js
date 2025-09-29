@@ -25,4 +25,10 @@ function fixPathsInFile(filePath) {
 const indexPath = path.join(__dirname, 'dist', 'index.html');
 fixPathsInFile(indexPath);
 
+// Fix paths in 404.html if it exists
+const notFoundPath = path.join(__dirname, 'dist', '404.html');
+if (fs.existsSync(notFoundPath)) {
+  fixPathsInFile(notFoundPath);
+}
+
 console.log('Path fixing completed!');
