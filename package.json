@@ -16,9 +16,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/atsang081/KidFinance-P2W.git"
+    "url": "https://github.com/atsang081/KidP2.git"
   },
-  "homepage": "https://atsang081.github.io/KidFinance-P2W",
+  "homepage": "https://atsang081.github.io/KidP2",
   "scripts": {
     "dev": "EXPO_NO_TELEMETRY=1 expo start",
     "start": "EXPO_NO_TELEMETRY=1 expo start",

@@ -1,7 +1,7 @@
 # 🏦 Kids Piggy Bank - Financial Education App
 
 ## 🌐 Live Demo
-**Try the app now**: [https://atsang081.github.io/KidFinance-P2W](https://atsang081.github.io/KidFinance-P2W)
+**Try the app now**: [https://atsang081.github.io/KidP2](https://atsang081.github.io/KidP2)
 
 *No installation required - works directly in your web browser!*
 
@@ -48,8 +48,8 @@ A React Native educational app designed to teach children about money management
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/atsang081/KidFinance-P2V2.git
-cd KidFinance-P2V2
+git clone https://github.com/atsang081/KidP2.git
+cd KidP2
 ```
 
 2. Install dependencies:
