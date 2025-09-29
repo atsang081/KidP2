@@ -1,13 +1,31 @@
 {
-  "name": "piggy-pockets",
+  "name": "kidfin-piggy-bank",
   "main": "expo-router/entry",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
+  "description": "A financial education app for children to learn money management and savings",
+  "keywords": [
+    "education",
+    "finance",
+    "kids",
+    "react-native",
+    "expo",
+    "piggy-bank"
+  ],
+  "author": "atsang081",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atsang081/KidFinance-P2W.git"
+  },
+  "homepage": "https://atsang081.github.io/KidFinance-P2W",
   "scripts": {
     "dev": "EXPO_NO_TELEMETRY=1 expo start",
     "start": "EXPO_NO_TELEMETRY=1 expo start",
     "build:web": "expo export --platform web",
-    "lint": "expo lint"
+    "lint": "expo lint",
+    "predeploy": "npm run build:web",
+    "deploy": "gh-pages -d web-build"
   },
   "dependencies": {
     "@expo-google-fonts/comic-neue": "^0.2.3",
@@ -46,6 +64,7 @@
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@types/react": "~18.3.12",
+    "gh-pages": "^6.3.0",
     "typescript": "^5.3.3"
   }
 }
