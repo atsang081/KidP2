@@ -6,6 +6,7 @@ import Colors from '@/constants/Colors';
 import { formatDate, formatCurrency } from '@/utils/formatting';
 import { CircleArrowDown as ArrowDownCircle, CircleArrowUp as ArrowUpCircle } from 'lucide-react-native';
 import EmptyState from '@/components/EmptyState';
+import { Transaction } from '@/types/types';
 
 export default function HistoryScreen() {
   const { transactions, appStyle } = useSpendingContext();
@@ -20,7 +21,7 @@ export default function HistoryScreen() {
     return true;
   });
 
-  const renderItem = ({ item }) => (
+  const renderItem = ({ item }: { item: Transaction }) => (
     <View style={[styles.transactionItem, { backgroundColor: Colors.white, shadowColor: Colors.darkGray }]}>
       <View style={styles.iconContainer}>
         {item.type === 'expense' ? (

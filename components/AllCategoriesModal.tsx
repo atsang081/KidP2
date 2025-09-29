@@ -46,7 +46,7 @@ export default function AllCategoriesModal({
       id: '1',
       name: 'Food',
       icon: <Cookie size={32} color={Colors.orange} />,
-      color: Colors.lightOrange,
+      color: Colors.lightYellow,
     },
     {
       id: '2',
