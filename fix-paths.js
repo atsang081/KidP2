@@ -11,6 +11,8 @@ function fixPathsInFile(filePath) {
   let content = fs.readFileSync(filePath, 'utf8');
   
   // Replace absolute paths with relative paths
+  content = content.replace(/href="\/KidP2\/([^"]*)"/g, 'href="./$1"');
+  content = content.replace(/src="\/KidP2\/([^"]*)"/g, 'src="./$1"');
   content = content.replace(/href="\/([^"]*)"/g, 'href="./$1"');
   content = content.replace(/src="\/([^"]*)"/g, 'src="./$1"');
   
