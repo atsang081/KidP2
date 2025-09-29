@@ -89,7 +89,7 @@ export function SpendingProvider({ children }: { children: React.ReactNode }) {
             // Parse stored data and convert date strings to Date objects
             const parsedTransactions = JSON.parse(storedTransactions).map((transaction: any) => ({
               ...transaction,
-              date: new Date(transaction.date)
+              date: transaction.date instanceof Date ? transaction.date : new Date(transaction.date)
             }));
             setTransactions(parsedTransactions);
           }
@@ -99,8 +99,8 @@ export function SpendingProvider({ children }: { children: React.ReactNode }) {
           if (storedDeposits) {
             const parsedDeposits = JSON.parse(storedDeposits).map((deposit: any) => ({
               ...deposit,
-              startDate: new Date(deposit.startDate),
-              maturityDate: new Date(deposit.maturityDate)
+              startDate: deposit.startDate instanceof Date ? deposit.startDate : new Date(deposit.startDate),
+              maturityDate: deposit.maturityDate instanceof Date ? deposit.maturityDate : new Date(deposit.maturityDate)
             }));
             setDeposits(parsedDeposits);
           }
@@ -142,7 +142,7 @@ export function SpendingProvider({ children }: { children: React.ReactNode }) {
             // Parse stored data and convert date strings to Date objects
             const parsedTransactions = JSON.parse(storedTransactions).map((transaction: any) => ({
               ...transaction,
-              date: new Date(transaction.date)
+              date: transaction.date instanceof Date ? transaction.date : new Date(transaction.date)
             }));
             setTransactions(parsedTransactions);
           }
@@ -152,8 +152,8 @@ export function SpendingProvider({ children }: { children: React.ReactNode }) {
           if (storedDeposits) {
             const parsedDeposits = JSON.parse(storedDeposits).map((deposit: any) => ({
               ...deposit,
-              startDate: new Date(deposit.startDate),
-              maturityDate: new Date(deposit.maturityDate)
+              startDate: deposit.startDate instanceof Date ? deposit.startDate : new Date(deposit.startDate),
+              maturityDate: deposit.maturityDate instanceof Date ? deposit.maturityDate : new Date(deposit.maturityDate)
             }));
             setDeposits(parsedDeposits);
           }
@@ -528,7 +528,15 @@ export function SpendingProvider({ children }: { children: React.ReactNode }) {
     // Clear storage
     try {
       if (Platform.OS === 'web') {
-        localStorage.clear(); // Clear all localStorage items
+        // Clear only the specific localStorage items used by the app
+        const keys = ['transactions', 'deposits', 'userProfile', 'hasLaunched'];
+        for (const key of keys) {
+          try {
+            localStorage.removeItem(key);
+          } catch (error) {
+            // Key not found or already deleted
+          }
+        }
       } else {
         // Clear all SecureStore items one by one
         const keys = ['transactions', 'deposits', 'userProfile', 'hasLaunched', 'appStyle'];
