@@ -216,7 +216,7 @@ My issue:
 Thank you!
     `);
     
-    const mailtoUrl = `mailto:alvintsang128@gmail.com?subject=${subject}&body=${body}`;
+    const mailtoUrl = `mailto:support@example.com?subject=${subject}&body=${body}`;
     
     // Open email client
     Linking.canOpenURL(mailtoUrl).then(supported => {
@@ -225,7 +225,7 @@ Thank you!
       } else {
         Alert.alert(
           'Email Not Supported',
-          'It seems your device cannot open email. Please email alvintsang128@gmail.com directly for support.'
+          'It seems your device cannot open email. Please contact support directly.'
         );
       }
     }).catch(error => {

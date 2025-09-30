@@ -149,7 +149,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-For support and questions, please open an issue in the GitHub repository.
+For support and questions, please contact the app developer.
 
 ---
 
