@@ -24,7 +24,7 @@
     "start": "EXPO_NO_TELEMETRY=1 expo start",
     "build:web": "expo export --platform web",
     "lint": "expo lint",
-    "predeploy": "rm -rf dist && WEB_PUBLIC_PATH=/KidP2/ npm run build:web && node fix-paths.js && node deploy.js",
+    "predeploy": "rm -rf dist && EXPO_PUBLIC_PATH=/KidP2/ npm run build:web && node fix-paths.js && node deploy.js",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
